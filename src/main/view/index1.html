@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>angular-demo1</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js"></script>
+	<script type="text/javascript" src="../js/controllers/controllers1.js"></script>
+	<script type="text/javascript" src="../js/services/services.js"></script>
+	<script type="text/javascript" src="../js/directive/directive.js"></script>
+</head>
+<body>
+	<div ng-controller="ParentController">
+		<div ng-controller="ChildController">
+			<a ng-click="sayHello()">Say hello</a>
+		</div>
+		{{ person }}
+	</div>
+</body>
+</html>

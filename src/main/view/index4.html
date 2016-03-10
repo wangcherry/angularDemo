@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>angular-demo4</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js"></script>
+	<script type="text/javascript" src="../js/controllers/controllers4.js"></script>
+	<script type="text/javascript" src="../js/services/services.js"></script>
+	<script type="text/javascript" src="../js/directive/directive.js"></script>
+</head>
+<body>
+	<div ng-controller="MyController">
+		显示：123.46<br/>
+		{{ 123.456789 | number:2 }}<br/>
+
+		讲123转换成货币的形式<br/>
+		{{ 123 | currency }}<br/>
+
+		date过滤器可以将日期格式化成需要的格式，默认会采用mediumDate格式<br/>
+		{{ today | date:'short' }} <!-- 8/9/1312:09PM --><br/>
+		{{ today | date:'fullDate' }} <!-- Thursday, August 09, 2013 --><br/>
+		{{ today | date:'longDate' }} <!-- August 09, 2013 --><br/>
+		{{ today | date:'mediumDate' }}<!-- Aug 09, 2013 --><br/>
+		{{ today | date:'shortDate' }} <!-- 8/9/13 --><br/>
+		{{ today | date:'mediumTime' }}<!-- 12:09:02 PM --><br/>
+		{{ today | date:'shortTime' }} <!-- 12:09 PM --><br/>
+		<!--  年份格式化 --><br/>
+		四位年份：{{ today | date:'yyyy' }} <!-- 2013 --><br/>
+		两位年份：{{ today | date:'yy' }} <!-- 13 --><br/>
+		一位年份：{{ today | date:'y' }} <!-- 2013 --><br/>
+		<!--  月份格式化 --><br/>
+		英文月份：{{ today | date:'MMMM' }} <!-- August --><br/>
+		英文月份简写：{{ today | date:'MMM' }} <!-- Aug --><br/>
+		数字月份：{{ today |date:'MM' }} <!-- 08 --><br/>
+		一年中的第几个月份：{{ today |date:'M' }} <!-- 8 --><br/>
+		<!--  日期格式化 --><br/>
+		数字日期：{{ today|date:'dd' }} <!-- 09 --><br/>
+		一个月中的第几天：{{ today | date:'d' }} <!-- 9 --><br/>
+		英文星期：{{ today | date:'EEEE' }} <!-- Thursday --><br/>
+		英文星期简写：{{ today | date:'EEE' }} <!-- Thu --><br/>
+		<!--  小时格式化 --><br/>
+		24小时制数字小时：{{today|date:'HH'}} <!--00--><br/>
+		一天中的第几个小时：{{today|date:'H'}} <!--0--><br/>
+		12小时制数字小时：{{today|date:'hh'}} <!--12--><br/>
+		上午或下午的第几个小时：{{today|date:'h'}} <!--12--><br/>
+		<!--  分钟格式化 --><br/>
+		数字分钟数：{{ today | date:'mm' }} <!-- 09 --><br/>
+		一个小时中的第几分钟：{{ today | date:'m' }} <!-- 9 --><br/>
+		<!--  秒数格式化 --><br/>
+		数字秒数：{{ today | date:'ss' }} <!-- 02 --><br/>
+		一分钟内的第几秒：{{ today | date:'s' }} <!-- 2 --><br/>
+		毫秒数：{{ today | date:'.sss' }} <!-- .995 --><br/>
+		<!--  字符格式化 --><br/>
+		上下午标识：{{ today | date:'a' }} <!-- AM --><br/>
+		四位时区标识：{{ today | date:'Z' }} <!--- 0700 --><br/>
+		下面是一些自定义日期格式的示例：<br/>
+		{{ today | date:'MMMd, y' }} <!-- Aug9, 2013 --><br/>
+		{{ today | date:'EEEE, d, M' }} <!-- Thursday, 9, 8--><br/>
+		{{ today | date:'hh:mm:ss.sss' }} <!-- 12:09:02.995 --><br/>
+	</div>
+</body>
+</html>

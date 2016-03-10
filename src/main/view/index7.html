@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>angular-demo7</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js"></script>
+	<script type="text/javascript" src="../js/controllers/controllers.js"></script>
+	<script type="text/javascript" src="../js/services/services.js"></script>
+	<script type="text/javascript" src="../js/directive/directive7.js"></script>
+</head>
+<body>
+	<p>We can access: {{ rootProperty }}</p>
+	<div ng-controller="ParentController">
+		<p>We can access: {{ rootProperty }}
+		and {{ parentProperty }}</p>
+		<div ng-controller="ChildController">
+			<p>
+			We can access:
+			{{ rootProperty }} and
+			{{ parentProperty }} and
+			{{ childProperty }}
+			</p>
+			<p>{{ fullSentenceFromChild }}</p>
+		</div>
+	</div>
+	<h1 ng-init="greeting='HelloWorld'">
+		The greeting is: {{ greeting }}
+	</h1>
+</body>
+</html>

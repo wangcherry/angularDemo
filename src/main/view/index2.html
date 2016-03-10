@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>angular-demo2</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js"></script>
+	<script type="text/javascript" src="../js/controllers/controllers2.js"></script>
+	<script type="text/javascript" src="../js/services/services.js"></script>
+	<script type="text/javascript" src="../js/directive/directive.js"></script>
+</head>
+<body>
+	<div ng-controller="MyController">
+		<input ng-model="expr"
+		type="text"
+		placeholder="Enter an expression" />
+		<h2>{{ parsedValue }}</h2>
+	</div>
+</body>
+</html>
