@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>shark-pager</title>
+    <link rel="stylesheet" href="/styles/css/shark-pager.css">
+    <script type="text/javascript" src="/scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/scripts/shark-pager.js"></script>
+</head>
+<body>
+    <div id="p1" class="shark-pager-container-sm"></div>
+    <div id="p2"></div>
+    <div id="p3" class="shark-pager-container-lg"></div>
+    <script>
+    $("#p1").sharkPager({
+        totalPages: 100,
+        page: 1,
+        lg : 'zh_CN',
+        segmentSize : 5,
+        callback: function(p) {
+            console.log(p);
+        }
+    });
+    $("#p2").sharkPager({
+        totalPages: 100,
+        page: 50,
+        lg : 'zh_TW',
+        segmentSize : 6,
+        callback: function(p) {
+            console.log(p);
+        }
+    });
+    $("#p3").sharkPager({
+        totalPages: 100,
+        page: 100,
+        lg : 'en_US',
+        segmentSize : 7,
+        callback: function(p) {
+            console.log(p);
+        }
+    });
+    </script>
+</body>
+</html>

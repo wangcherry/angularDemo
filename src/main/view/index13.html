@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>angular-demo13</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js"></script>
+	<script type="text/javascript" src="../js/controllers/controllers13.js"></script>
+	<script type="text/javascript" src="../js/services/services.js"></script>
+	<script type="text/javascript" src="../js/directive/directive.js"></script>
+</head>
+
+<body>
+
+<div ng-controller="CityController">
+    <select ng-model="city" ng-options="city.name for city in cities">
+        <option value="">Choose City</option>
+    </select>
+    Best City: {{ city.name }}
+</div>
+
+</body>
+</html>

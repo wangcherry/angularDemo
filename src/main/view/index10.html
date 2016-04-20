@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>angular-demo10</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js"></script>
+	<script type="text/javascript" src="../js/controllers/controllers10.js"></script>
+	<script type="text/javascript" src="../js/services/services.js"></script>
+	<script type="text/javascript" src="../js/directive/directive.js"></script>
+    <style type="text/css">
+    .odd {
+        background-color: blue;
+    }
+
+    .even {
+        background-color: red;
+    }
+    </style>
+</head>
+
+<body>
+    <ul ng-controller="PeopleController">
+        <li ng-repeat="person in people" ng-class="{even: !$even, odd: !$odd}">
+            {{person.name}} lives in {{person.city}}
+        </li>
+    </ul>
+    <div ng-init="greeting='HelloWorld';name='wy'">
+        <p ng-bind="greeting"></p>
+        {{greeting}}
+        <p ng-cloak>{{ greeting }}</p>
+        <p ng-bind-template="{{greeting}}{{name}}">></p>
+    </div>
+</body>
+</html>

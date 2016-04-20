@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>angular-demo8</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js"></script>
+	<script type="text/javascript" src="../js/controllers/controllers.js"></script>
+	<script type="text/javascript" src="../js/services/services.js"></script>
+	<script type="text/javascript" src="../js/directive/directive8.js"></script>
+</head>
+<body>
+	<label>Their URL field:</label>
+	<input type="text" ng-model="theirUrl">
+	<div my-directive some-attr="theirUrl" my-link-text="Click me to go to Google"></div>
+	<label>someProperty = {{someProperty}}</label>
+	<input type="checkbox" ng-checked="someProperty" ng-init="someProperty = true" ng-model="someProperty"><br/>
+	<label>someProperty = {{anotherProperty}}</label>
+	<input type="checkbox" ng-checked="anotherProperty" ng-init="anotherProperty = false" ng-model="anotherProperty"><br/>
+	<label>Select Two Fish:</label>
+	<input type="checkbox" ng-model="isTwoFish">
+	<select>
+	    <option>One Fish</option>
+	    <option ng-selected="isTwoFish">Two Fish</option>
+	</select>
+
+</body>
+</html>

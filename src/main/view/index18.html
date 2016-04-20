@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>angular-demo18</title>
+</head>
+<style type="text/css">
+ .expander { border: 1px solid black; width: 250px; }
+ .expander>.title { background-color: black; color: white; padding: .1em .3em; cursor: pointer; }
+ .expander>.body { padding: .1em .3em; }
+</style>
+<body>
+    <div ng-controller='SomeController'>
+        <accordion>
+            <expander class='expander' ng-repeat='expander in expanders' expander-title='expander.title'>
+                {{expander.text}}
+            </expander>
+        </accordion>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js"></script>
+    <!-- <script type="text/javascript" src="../js/controllers/controllers18.js"></script> -->
+    <script type="text/javascript" src="../js/directive/directive18.js"></script>
+    <script type="text/javascript" src="../js/services/services.js"></script>
+</body>
+</html>

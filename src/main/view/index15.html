@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>angular-demo15</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js"></script>
+	<script type="text/javascript" src="../js/controllers/controllers15.js"></script>
+	<script type="text/javascript" src="../js/services/services.js"></script>
+	<script type="text/javascript" src="../js/directive/directive15.js"></script>
+</head>
+<body>
+<!-- 1 -->
+<div ng-controller='MainController'>
+    Outside myDirective: {{ myProperty }}
+    <div my-directive ng-init="myProperty = 'wow, this is cool'">
+        Inside myDirective: {{ myProperty }}
+    </div>
+</div>
+
+
+<!-- 2 -->
+<!-- <div ng-controller="SomeController">
+    {{ someBareValue }}
+    <button ng-click="someAction()">Communicate to child</button>
+    <div ng-controller="ChildController">
+        {{ someBareValue }}
+        <button ng-click="childAction()">Communicate to parent</button>
+    </div>
+</div> -->
+
+</body>
+</html>
